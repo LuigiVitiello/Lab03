@@ -83,7 +83,8 @@ public class FXMLController {
     		listInput.add(arrayInput[i]);
     	}
    
-    	List<RichWord> parole = model.spellCheckText(listInput);
+    	//List<RichWord> parole = model.spellCheckTextLinear(listInput);
+    	List<RichWord> parole = model.spellCheckTextDichotomic(listInput);
     	List<RichWord> sbagliate = model.wrongWord(parole);
     	model.setWrong(sbagliate);
     	String output=model.toString();
